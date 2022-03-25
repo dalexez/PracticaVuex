@@ -27,4 +27,18 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+header {
+
+  width: 100%
+}
+
+footer{
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
 </style>
