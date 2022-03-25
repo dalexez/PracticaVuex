@@ -1,13 +1,13 @@
 <template>
     <div>
         <headerPage/>
-        <navPage/><contentHome/>
+        <navPage/><saboresPastel/>
         <footerPage/>
     </div>
 </template>
 
 <script>
-import contentHome from '@/components/contentHome.vue'
+import saboresPastel from '@/components/saboresPastel.vue'
 import headerPage from '@/components/headerPage.vue'
 import navPage from '@/components/navPage.vue'
 import footerPage from '@/components/footerPage.vue'
@@ -15,7 +15,7 @@ import footerPage from '@/components/footerPage.vue'
 export default {
     name: 'clienteView',
     components: {
-        contentHome,
+        saboresPastel,
         headerPage,
         navPage,
         footerPage

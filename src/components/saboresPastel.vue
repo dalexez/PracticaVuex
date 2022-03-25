@@ -18,5 +18,7 @@ export default {
 div {
     display: flex;
     flex-direction: column;
+    justify-items: center;
+    width: 70%;
 }
 </style>

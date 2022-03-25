@@ -3,7 +3,7 @@
         <nav class="menu">
             <div>
                 <ul>
-                    <li><a href="#">Sabores</a></li>
+                    <li><router-link to="/sabores">Sabores</router-link></li>
                     <li><a href="#">Decoraciones</a></li>
                     <li><a href="#">Agenda tu pedido</a></li>
                     <li><a href="#">Home</a></li>
@@ -19,5 +19,6 @@
     width: 30%;
     justify-content: center;
     align-items: center;
+    background: rgba(255,197,203,255);
 }
 </style>
