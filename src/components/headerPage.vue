@@ -6,7 +6,9 @@
             </div>
             <div class="bienvenida">
                 <h1>¡Bienvenidos a SweetCup!</h1>
-                <h2>Hola</h2>
+                <h2>Hola
+                    <h2>dsfdasfdsfa</h2>
+                </h2>
             </div>
         </div>
     </header>
