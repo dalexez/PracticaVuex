@@ -4,10 +4,10 @@
             <div>
                 <ul>
                     <li><router-link to="/sabores">Sabores</router-link></li>
-                    <li><a href="#">Decoraciones</a></li>
-                    <li><a href="#">Agenda tu pedido</a></li>
+                    <li><router-link to="/decoraciones">Decoraciones</router-link></li>
+                    <li><router-link to="/pedido">Agenda tu pedido</router-link></li>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Ingresar</a></li>
+                    <li><router-link to="/login">Ingresar</router-link></li>
                 </ul>
             </div>
         </nav>
