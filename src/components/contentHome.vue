@@ -1,12 +1,21 @@
 <template>
     <div>
-        <img src="../assets/pastelesHome.png" alt="muestra pasteles">
+        <img v-show="login" src="../assets/pastelesHome.png" alt="muestra pasteles">
     </div>
+    <div>
+    Usuario: Manz
+    <span v-show="login">(Identificado)</span>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'contentHome'
+    name: 'contentHome',
+        data() {
+            return {
+                login: false
+    }
+  }
 }
 </script>
 
