@@ -14,11 +14,11 @@
 
 
             <label for="nombre">¿Cual es tu nombre?</label>
-            <input type="text" id="nombre" placeholder="Tu nombre">
+            <input type="text" v-model="nombre">
             <br><br>
     
             <label for="tel">¿Cual es tu telefono?</label><br>
-            <input type="tel" id="tel" name="tel" maxlength="10">
+            <input type="tel" maxlength="10" v-model="telefono"><!-- <input type="tel" id="tel" name="tel" maxlength="10"> -->
             
             <br><br>
     
@@ -28,8 +28,9 @@
             <br><br>
     
             <label for="sabores">Elige tu sabor o sabores de pastel</label><br><br>
-            <input type="checkbox" id="sabor1" name="sabor1" value="Vainilla">
+            <input type="checkbox" v-model="vainilla"><!-- <input type="checkbox" id="sabor1" name="sabor1" value="Vainilla"> -->
             <label for="sabor1">Vainilla</label><br>
+            <button @click="imprimirSabor" >Agregar sabor</button>
             <input type="checkbox" id="sabor2" name="sabor1" value="Chocolate">
             <label for="sabor2">Chocolate</label><br>
             <input type="checkbox" id="sabor3" name="sabor1" value="Moka">
@@ -41,16 +42,7 @@
             <input type="checkbox" id="sabor6" name="sabor1" value="Red Velvet">
             <label for="sabor6">Red Velvet</label><br><br>
     
-    
-            <label for="decoracion">Elige tu decoracion</label><br><br>
-            <input type="checkbox" id="decoracion1" name="decoracion1" value="Figuras de fondant">
-            <label for="sabor1">Figuras de fondant</label><br>
-            <input type="checkbox" id="decoracion2" name="decoracion2" value="Letras de chantilli">
-            <label for="sabor2">Letras de chantilli</label><br>
-            <input type="checkbox" id="decoracion3" name="decoracion3" value="Fruta en almibar">
-            <label for="sabor3">Fruta en almibar</label><br>
-            <input type="checkbox" id="decoracion4" name="decoracion4" value="Velas de numeros">
-            <label for="sabor4">Velas de numeros</label><br><br>
+
     
             <label for="descripcion">Descripcion de tu pastel</label><br><br>
             <textarea name="descripcion" id="descripcion" cols="30" rows="10">
@@ -70,7 +62,10 @@ export default {
     name: 'formPedido',
     data (){
         return {
-            sabor:''
+            sabor:'',
+            nombre:'Ingresa tu nombre:',
+            telefono:'',
+            vainilla: null
         }
     },
     methods: {
@@ -78,6 +73,9 @@ export default {
             this.$store.commit('asignarSabor', this.sabor)// this.$store.state.sabor = this.sabor
             this.$store.dispatch('addSaborAction')
             this.sabor = ''
+        },
+        imprimirSabor() {
+            console.log(this.vainilla)
         }
     }
 }
@@ -96,7 +94,7 @@ form {
     flex-direction: column;
 }
 input {
-    width: 40%;
+    width: 100%;
 }
 label {
     text-align: left;

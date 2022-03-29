@@ -1,13 +1,18 @@
 <template>
     <div>
         <headerPage/>
-        <navPage/><formPedido/>
+        <navPage/>
+        <div class="contenido">
+        <informacionPedido/><saboresPedido/><decoracionesPedido/>
+        </div>
         <footerPage/>
     </div>
 </template>
 
 <script>
-import formPedido from '@/components/formPedido.vue'
+import informacionPedido from '@/components/informacionPedido.vue'
+import saboresPedido from '@/components/saboresPedido.vue'
+import decoracionesPedido from '@/components/decoracionesPedido.vue'
 import headerPage from '@/components/headerPage.vue'
 import navPage from '@/components/navPage.vue'
 import footerPage from '@/components/footerPage.vue'
@@ -15,7 +20,9 @@ import footerPage from '@/components/footerPage.vue'
 export default {
     name: 'clienteView',
     components: {
-        formPedido,
+        informacionPedido,
+        decoracionesPedido,
+        saboresPedido,
         headerPage,
         navPage,
         footerPage
@@ -27,5 +34,11 @@ export default {
 div {
     display: flex;
     flex-wrap: wrap;
+}
+.contenido {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-content: center;
 }
 </style>
