@@ -1,10 +1,10 @@
 <template>
     <div>
-        <img v-show="login" src="../assets/pastelesHome.png" alt="muestra pasteles">
+        <img v-if="login" src="../assets/pastelesHome.png" alt="muestra pasteles">
     </div>
-    <div>
+    <div v-show="login">
     Usuario: Manz
-    <span v-show="login">(Identificado)</span>
+    <span>(Identificado)</span>
   </div>
 </template>
 

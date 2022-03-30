@@ -1,6 +1,7 @@
 <template>
 <div>
     <form action="">
+        <h4>Elige tu sabor</h4>
         <input type="checkbox" id="Vainilla" value="vainilla" v-model.lazy="sabores">
         <label for="Vainilla">Vainilla</label>
         <br>

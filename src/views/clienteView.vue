@@ -1,13 +1,14 @@
 <template>
     <div>
         <headerPage/>
-        <navPage/><contentHome/>
+        <navPage/><formPedido/>
         <footerPage/>
     </div>
 </template>
 
 <script>
-import contentHome from '@/components/contentHome.vue'
+
+import formPedido from '@/components/formPedido.vue'
 import headerPage from '@/components/headerPage.vue'
 import navPage from '@/components/navPage.vue'
 import footerPage from '@/components/footerPage.vue'
@@ -15,7 +16,7 @@ import footerPage from '@/components/footerPage.vue'
 export default {
     name: 'clienteView',
     components: {
-        contentHome,
+        formPedido,
         headerPage,
         navPage,
         footerPage

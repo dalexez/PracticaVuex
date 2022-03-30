@@ -1,6 +1,7 @@
 <template>
 <div>
     <form action="">
+        <h4>Elige tu decoracion</h4>
         <input type="checkbox" id="Fondant" value="fondant" v-model.lazy="decoraciones">
         <label for="Fondant">Figuras de Fondant</label>
         <br>

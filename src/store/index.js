@@ -4,8 +4,14 @@ export default createStore({
   state: {
     sabores: [],
     sabor: null,
-    decoraciones: [],
-    decoracion: null
+    decoracion: null,
+    pedido: {
+      Nombre: '',
+      Telefono: '',
+      Correo: '',
+      sabores: [],
+      decoraciones: []
+    }
   },
   getters: {
   },
