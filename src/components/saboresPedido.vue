@@ -1,6 +1,6 @@
 <template>
-<div>
-    <form action="">
+<div v-if="showSabores">
+    <form>
         <h4>Elige tu sabor</h4>
         <input type="checkbox" id="Vainilla" value="vainilla" v-model.lazy="sabores">
         <label for="Vainilla">Vainilla</label>
@@ -20,7 +20,8 @@
         <input type="checkbox" id="RedVelvet" value="redVelvet" v-model.lazy="sabores">
         <label for="RedVelvet">Red Velvet</label>
         <br>
-        <span>Sabores elegidos: {{ sabores }}</span>
+        <h4>Sabores elegidos: {{ sabores }}</h4>
+        <!-- <button @click="addSabores" >Siguiente</button> -->
     </form>
   </div>
 </template>
@@ -30,7 +31,18 @@
     name: "saboresPedido",
     data() {
       return {
-        sabores: []
+        sabores: [],
+        showSabores: this.$store.state.showSabores
+      }
+    },
+    methods: {
+      addSabores() {
+        console.log(this.$store.state.show)
+        // this.$store.state.pedido.sabores = this.sabores
+        // this.showSabores = false
+        this.showSabores = false
+        console.log(this.$store.state.show)
+        
       }
     }
   }

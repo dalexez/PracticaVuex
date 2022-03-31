@@ -3,7 +3,11 @@
         <headerPage/>
         <navPage/>
         <div class="contenido">
-        <saboresPedido/><decoracionesPedido/><informacionPedido/>
+        <saboresPedido v-if="showSabores"></saboresPedido>
+        <decoracionesPedido v-if="showDecoraciones"></decoracionesPedido>
+        <informacionPedido v-if="showInformacion"></informacionPedido>
+        <!-- <decoracionesPedido/><informacionPedido/> -->
+        <button @click="siguienteComponente" >{{msjBoton}}</button>
         </div>
         <footerPage/>
     </div>
@@ -26,6 +30,36 @@ export default {
         headerPage,
         navPage,
         footerPage
+    },
+    data() {
+        return {
+            showSabores: true,
+            showDecoraciones: false,
+            showInformacion: false,
+            msjBoton:'Siguiente'
+        }
+    },
+    methods: {
+        siguienteComponente() {
+            if (!this.showDecoraciones & !this.showInformacion){
+                this.showSabores = false
+                this.showDecoraciones = true
+                this.showInformacion = false
+            } else if (!this.showSabores & !this.showInformacion){
+                this.showDecoraciones = false
+                this.showSabores = false
+                this.showInformacion = true
+            } else {
+                this.showSabores = false
+                this.showDecoraciones = false
+                this.showInformacion = false
+                this.msjBoton = 'Hacer otro pedido'
+            }
+            // this.showDecoraciones = true
+            // this.showInformacion = false
+            // console.log(this.showSabores)
+            // console.log(this.showDecoraciones)
+        }
     }
 }
 </script>
