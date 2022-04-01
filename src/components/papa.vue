@@ -52,10 +52,10 @@
 <script>
 
 
-    import BrotherCard from './BrotherCard.vue';
+    import BrotherCard from '../components/hermano.vue';
 
 
-    import SisterCard from './SisterCard.vue';
+    import SisterCard from '../components/hermana.vue';
 
 
  

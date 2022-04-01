@@ -4,7 +4,7 @@
     <div>
 
 
-        <div class="card m-3" style="width: 15rem;">
+        <div v-if="messagedaughter" class="card m-3" style="width: 15rem;">
 
 
             <div class="card-body">
@@ -18,6 +18,7 @@
 
                 <button @click="messageBrother" class="btn btn-warning">Message Brother</button>
 
+                <h4></h4>
 
                 <div v-if="messagedaughter" class="mt-3 alert alert-secondary" v-html="messagedaughter"></div>
 
@@ -55,7 +56,8 @@
             return {
 
 
-                thecardtitle: 'Child Component!'
+                thecardtitle: 'Child Component!',
+                
 
 
             }

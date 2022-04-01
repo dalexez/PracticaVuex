@@ -4,7 +4,7 @@
     <div>
 
 
-        <div class="card m-3" style="width: 15rem;">
+        <div v-if="show" class="card m-3" style="width: 15rem;">
 
 
             <div class="card-body">
@@ -55,7 +55,8 @@
             return {
 
 
-                thecardtitle: 'Child Component!'
+                thecardtitle: 'Child Component!',
+                show: true
 
 
             }
@@ -74,6 +75,7 @@
 
 
                 this.$emit('brothersaid', 'Mom said do your homework!')
+                
 
 
             }

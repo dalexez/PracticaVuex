@@ -1,14 +1,14 @@
 <template>
     <div>
         <headerPage/>
-        <navPage/><formPedido/>
+        <navPage/><papa/>
         <footerPage/>
     </div>
 </template>
 
 <script>
 
-import formPedido from '@/components/formPedido.vue'
+import papa from '@/components/papa.vue'
 import headerPage from '@/components/headerPage.vue'
 import navPage from '@/components/navPage.vue'
 import footerPage from '@/components/footerPage.vue'
@@ -16,7 +16,7 @@ import footerPage from '@/components/footerPage.vue'
 export default {
     name: 'clienteView',
     components: {
-        formPedido,
+        papa,
         headerPage,
         navPage,
         footerPage
