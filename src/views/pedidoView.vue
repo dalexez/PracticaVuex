@@ -3,7 +3,7 @@
         <headerPage/>
         <navPage/>
         <div class="contenido">
-        <saboresPedido></saboresPedido>
+        <saboresPedido/>
         <decoracionesPedido/>
         <informacionPedido/>
         </div>

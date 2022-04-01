@@ -2,9 +2,9 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    sabores: [],
-    sabor: null,
-    decoracion: null,
+    showSabores: true,
+    showDecoraciones: true,
+    show: '',
     pedido: {
       Nombre: '',
       Telefono: '',

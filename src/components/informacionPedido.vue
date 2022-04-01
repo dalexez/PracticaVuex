@@ -1,6 +1,5 @@
 <template>
 <div>
-    <form action="">
         <h4>Datos de contacto</h4>
         <label for="nombre">¿Cual es tu nombre?</label>
             <input type="text" id="nombre" v-model="nombre">
@@ -16,15 +15,11 @@
                 Describe un poco como deseas tu pastel :)
             </textarea>
   <!-- <span>Sabores elegidos: {{ decoraciones }}</span> -->
-        <button @click="addPedido" >Agregar pedido</button>
-    </form>
+        <!-- <button @click="addPedido" >Agregar pedido</button> -->
   </div>
 </template>
 
 <script>
-
-  import saboresPedido from '../components/saboresPedido.vue'
-
   export default {
     name: "informacionPedido",
     data() {
@@ -49,6 +44,7 @@
 <style scoped>
 div {
     display: flex;
+    flex-flow: column;
 }
 form {
     text-align: left;
