@@ -4,7 +4,7 @@
     <div>
 
 
-        <div v-if="show" class="card m-3" style="width: 15rem;">
+        <div  class="card m-3" style="width: 15rem;">
 
 
             <div class="card-body">
@@ -19,7 +19,7 @@
                 <button @click="messageSister" class="btn btn-primary">Message Sister</button>
 
 
-                <div v-if="messageson" class="mt-3 alert alert-secondary" v-html="messageson"></div>
+                <div v-if="messageson" class="mt-3 alert alert-secondary" >saludo</div>
 
 
             </div>
@@ -56,7 +56,7 @@
 
 
                 thecardtitle: 'Child Component!',
-                show: true
+                
 
 
             }

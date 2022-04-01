@@ -1,5 +1,5 @@
 <template>
-<div v-if="showSabores">
+<div v-if="show">
     <form>
         <h4>Elige tu sabor</h4>
         <input type="checkbox" id="Vainilla" value="vainilla" v-model.lazy="sabores">
@@ -21,7 +21,7 @@
         <label for="RedVelvet">Red Velvet</label>
         <br>
         <h4>Sabores elegidos: {{ sabores }}</h4>
-        <!-- <button @click="addSabores" >Siguiente</button> -->
+        <button @click="upSabores" >Siguiente</button>
     </form>
   </div>
 </template>
@@ -29,20 +29,22 @@
 <script>
   export default {
     name: "saboresPedido",
+    props: ['show'],
+    
     data() {
       return {
         sabores: [],
-        showSabores: this.$store.state.showSabores
       }
     },
     methods: {
-      addSabores() {
-        console.log(this.$store.state.show)
+      upSabores() {
+        //console.log(this.$store.state.show)
         // this.$store.state.pedido.sabores = this.sabores
         // this.showSabores = false
-        this.showSabores = false
-        console.log(this.$store.state.show)
-        
+        // this.showSabores = false
+        // console.log(this.$store.state.show)
+        //console.log(this.sabores)
+        this.$emit('upSabores', this.sabores)
       }
     }
   }

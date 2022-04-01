@@ -2,10 +2,11 @@
     <div>
         <headerPage/>
         <navPage/>
+        <!-- duda de porque funciona igual mandado datos con $event y sin el -->
         <div class="contenido">
-        <saboresPedido/>
-        <decoracionesPedido/>
-        <informacionPedido/>
+        <saboresPedido :show="showSabores" @upSabores="addSabores($event)"></saboresPedido> 
+        <decoracionesPedido :show="showDecoraciones" @upDecoraciones="addDecoraciones($event)"></decoracionesPedido>
+        <informacionPedido :show="showInformacion" @upInformacion="addInformacion"></informacionPedido>
         </div>
         <footerPage/>
     </div>
@@ -28,6 +29,33 @@ export default {
         headerPage,
         navPage,
         footerPage
+    },
+    data() {
+        return {
+            showSabores: ' ',
+            showDecoraciones: '',
+            showInformacion: '',
+        }
+    },
+    methods: {
+        addSabores(sabores) {
+            this.showSabores = ''
+            this.$store.state.sabores = sabores
+            this.showDecoraciones = ' '
+        },
+        addDecoraciones(decoraciones){
+            this.showDecoraciones = ''
+            this.$store.state.decoraciones = decoraciones
+            this.showInformacion = ' '
+        },
+        addInformacion(nombre, telefono, correo){
+            this.showInformacion = ''
+            console.log(nombre)
+            console.log(telefono)
+            console.log(correo)
+            this.$store.commit('addSabores')
+            console.log(this.$store.state.pedido.sabores)
+        }
     }
 }
 </script>

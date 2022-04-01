@@ -2,8 +2,11 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    showSabores: true,
-    showDecoraciones: true,
+    Nombre: '',
+    Telefono: '',
+    Correo: '',
+    sabores: [],
+    decoraciones: [],
     show: '',
     pedido: {
       Nombre: '',
@@ -16,8 +19,8 @@ export default createStore({
   getters: {
   },
   mutations: {
-    addSabor(state) {
-      state.sabores = [state.sabor, ...state.sabores]
+    addSabores(state) {
+      state.pedido.sabores = state.sabores
     },
     asignarSabor(state, inSabor) {
       state.sabor = inSabor

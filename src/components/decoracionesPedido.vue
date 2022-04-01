@@ -1,6 +1,6 @@
 <template>
-<div v-if="showDecoraciones">
-    <form action="">
+<div>
+    <form v-if="show">
         <h4>Elige tu decoracion</h4>
         <input type="checkbox" id="Fondant" value="fondant" v-model.lazy="decoraciones">
         <label for="Fondant">Figuras de Fondant</label>
@@ -15,7 +15,7 @@
         <label for="Velas">Velas de Numeros</label>
         <br>
         <h4>Sabores elegidos: {{ decoraciones }}</h4>
-        <!-- <button @click="addDecoraciones" >Siguiente</button> -->
+        <button @click="upDecoraciones" >Siguiente</button>
     </form>
   </div>
 </template>
@@ -23,18 +23,19 @@
 <script>
   export default {
     name: "decoracionesPedido",
+    props: ['show'],
     data() {
       return {
         decoraciones: [],
-        showDecoraciones: this.$store.state.showDecoraciones
       }
     },
     methods: {
-      addDecoraciones() {
-        this.$store.state.pedido.decoraciones = this.decoraciones
-        this.showSabores = false
-        console.log(this.$store.state.pedido)
-      }
+      upDecoraciones() {
+        // this.$store.state.pedido.decoraciones = this.decoraciones
+        // this.showSabores = false
+        // console.log(this.$store.state.pedido)
+        this.$emit('upDecoraciones', this.decoraciones)
+      }  
     }
   }
 </script>
